@@ -26,3 +26,5 @@ class Player:
 
     def add_assist(self):
         self.assists += 1   
+    def __str__(self):
+        return f"{self.name} ({self.player_id}) - Goals: {self.goals}"    
