@@ -21,3 +21,8 @@ class Player:
 
         self.goals = 0
         self.assists = 0        
+    def add_goal(self):
+        self.goals += 1
+
+    def add_assist(self):
+        self.assists += 1   
