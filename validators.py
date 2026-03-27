@@ -8,3 +8,5 @@ def clean_name(name):
     return name.strip().title()
 def check_player_id(player_id):
     return re.match(r"^PLR\d{4}$", player_id) is not None
+ def check_email(email):
+    return re.fullmatch(r"[\w\.-]+@[\w\.-]+\.\w+", email) is not None
