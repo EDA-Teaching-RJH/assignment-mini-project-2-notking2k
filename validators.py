@@ -13,3 +13,6 @@ def player_code_ok(value):
 def email_ok(value):
     pattern = r"^[\w\.-]+@[\w\.-]+\.\w+$"
     return re.fullmatch(pattern, value) is not None
+
+def get_bits(text):
+    return re.findall(r"[A-Za-z0-9]+", text)
