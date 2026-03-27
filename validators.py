@@ -15,4 +15,4 @@ def email_ok(value):
     return re.fullmatch(pattern, value) is not None
 
 def get_bits(text):
-    return re.findall(r"[A-Za-z0-9]+", text)
+    return re.findall(r"[A-Za-z0-9]+", text) 
