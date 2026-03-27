@@ -39,3 +39,12 @@ class Striker(Player):
 class Team:
      def __init__(self):
         self.players = []       
+      
+     def add_player(self, player):
+        self.players.append(player)
+
+     def get_player(self, player_id):
+         for p in self.players:
+            if p.player_id == player_id:
+                return p
+        return None  
