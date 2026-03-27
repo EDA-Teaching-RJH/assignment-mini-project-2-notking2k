@@ -5,3 +5,7 @@ def save_players(team):
         writer.writerow(["name", "id", "email"])
     for p in team.players:
         writer.writerow([p.name, p.player_id, p.email])       
+def load_players(team):
+    with open("players.csv", "r") as file:
+        reader = csv.reader(file)
+        next(reader)
