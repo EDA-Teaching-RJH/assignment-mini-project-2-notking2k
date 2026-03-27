@@ -10,4 +10,4 @@ for row in reader:
 def log_action(text, file_name="activity_log.txt"):
     now = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
     with open(file_name, "a", encoding="utf-8") as file:
-        file.write(f"{now} - {text}\n")
+        file.write(f"{now} - {text}\n") 
