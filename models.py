@@ -28,3 +28,11 @@ class Player:
         self.assists += 1   
     def __str__(self):
         return f"{self.name} ({self.player_id}) - Goals: {self.goals}"    
+
+class Striker(Player):
+    def __init__(self, name, player_id, email):
+        super().__init__(name, player_id, email)
+        self.shots = 0    
+class Team:
+    def __init__(self):
+        self.players = []        
