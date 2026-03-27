@@ -5,3 +5,19 @@ class Player:
         self.email = email
         self.goals = 0
         self.assists = 0
+from validators import clean_name, check_player_id, check_email
+
+class Player:
+    def __init__(self, name, player_id, email):
+        self.name = clean_name(name)
+
+        if not check_player_id(player_id):
+            raise ValueError("Invalid ID")
+        self.player_id = player_id
+
+        if not check_email(email):
+            raise ValueError("Invalid email")
+        self.email = email
+
+        self.goals = 0
+        self.assists = 0        
