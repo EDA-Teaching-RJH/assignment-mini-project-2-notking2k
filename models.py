@@ -30,7 +30,7 @@ class SquadMember:
             "role": "SquadMember",
             "extra": ""
         }
-   def __str__(self):
+    def __str__(self):
         return f"{self.name} - {self.code} - Goals: {self.goals} - Assists: {self.assists}"
 
 
