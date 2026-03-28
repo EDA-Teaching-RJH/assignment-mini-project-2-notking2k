@@ -1,3 +1,4 @@
+#THIS FILE HAS THE CLASSES USED IN THE TRACKER 
 class Player:
     def __init__(self, name, player_id, email):
         self.name = name
@@ -6,7 +7,7 @@ class Player:
         self.goals = 0
         self.assists = 0
 from validators import clean_name, check_player_id, check_email
-
+#this is the main player class used for storing the football stats 
 class Player:
     def __init__(self, name, player_id, email):
         self.name = clean_name(name)
@@ -26,6 +27,7 @@ class Player:
 
     def add_assist(self):
         self.assists += 1   
+    #this will control how the player is shown when printed
     def __str__(self):
         return f"{self.name} ({self.player_id}) - Goals: {self.goals}"    
 
@@ -33,12 +35,14 @@ class Striker(Player):
     def __init__(self, name, player_id, email):
         super().__init__(name, player_id, email)
         self.shots = 0    
+#the teams class stores all the players in one spot 
 class Team:
     def __init__(self):
         self.players = []        
+    # this allows u to find a player by their id 
     def add_player(self, player):
         self.players.append(player)
-
+# this lets me remove a player by their id
     def get_player(self, player_id):
         for p in self.players:
             if p.player_id == player_id:
